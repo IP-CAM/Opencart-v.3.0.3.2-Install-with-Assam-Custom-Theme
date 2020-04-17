@@ -1,0 +1,16 @@
+.DS_Store
+
+/config.php
+admin/config.php
+
+## Image Cache Files
+/image/cache/*
+!/image/cache/index.html
+
+## System Cache Files
+/system/storage/cache/*
+!/system/storage/
+
+## System Logs Files
+/system/storage/logs/*
+!/system/storage/logs/index.html
