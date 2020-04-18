@@ -1,0 +1,32 @@
+<script src="https://geowidget.easypack24.net/js/sdk-for-javascript.js"></script>
+<script type="text/javascript">
+  window.easyPackAsyncInit = function () {
+    easyPack.init({
+      mapType: 'osm',
+      searchType: 'osm',
+    });
+
+    //console.log(document.getElementById('input-shipping-city').value);
+
+    var map = easyPack.mapWidget('easypack-map', function(point) {
+      console.log(point);
+      var address = point.address_details.street + ' ' +
+        point.address_details.building_number;
+
+      if(point.address_details.flat_number) {
+        address += '/' + point.address_details.flat_number
+      }
+
+      address += ' ' + point.address_details.city;
+
+      document.getElementById('shipping-comment').value =
+        'Wybrany paczkomat: ' + point.name + ', ' + address
+    });
+  };
+</script>
+
+
+<div id="easypack-map"></div>
+
+<link rel="stylesheet" href="https://geowidget.easypack24.net/css/easypack.css"/>
+
