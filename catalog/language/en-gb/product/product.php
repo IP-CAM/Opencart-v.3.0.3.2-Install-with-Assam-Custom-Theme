@@ -1,50 +1,53 @@
 <?php
 // Text
-$_['text_search']              = 'Search';
-$_['text_brand']               = 'Brand';
-$_['text_manufacturer']        = 'Brand:';
-$_['text_model']               = 'Product Code:';
-$_['text_reward']              = 'Reward Points:';
-$_['text_points']              = 'Price in reward points:';
-$_['text_stock']               = 'Availability:';
-$_['text_instock']             = 'In Stock';
-$_['text_tax']                 = 'Ex Tax:';
-$_['text_discount']            = ' or more ';
-$_['text_option']              = 'Available Options';
-$_['text_minimum']             = 'This product has a minimum quantity of %s';
-$_['text_reviews']             = '%s reviews';
-$_['text_write']               = 'Write a review';
-$_['text_login']               = 'Please <a href="%s">login</a> or <a href="%s">register</a> to review';
-$_['text_no_reviews']          = 'There are no reviews for this product.';
-$_['text_note']                = '<span class="text-danger">Note:</span> HTML is not translated!';
-$_['text_success']             = 'Thank you for your review. It has been submitted to the webmaster for approval.';
-$_['text_related']             = 'Related Products';
-$_['text_tags']                = 'Tags:';
-$_['text_error']               = 'Product not found!';
-$_['text_payment_recurring']   = 'Payment Profile';
-$_['text_trial_description']   = '%s every %d %s(s) for %d payment(s) then';
-$_['text_payment_description'] = '%s every %d %s(s) for %d payment(s)';
-$_['text_payment_cancel']      = '%s every %d %s(s) until canceled';
-$_['text_day']                 = 'day';
-$_['text_week']                = 'week';
-$_['text_semi_month']          = 'half-month';
-$_['text_month']               = 'month';
-$_['text_year']                = 'year';
+$_['text_search']                             = 'Szukaj';
+$_['text_brand']                              = 'Producent';
+$_['text_manufacturer']                       = 'Producent:';
+$_['text_model']                              = 'Kod produktu:';
+$_['text_reward']                             = 'Punkty zwrotne:';
+$_['text_points']                             = 'Cena po uwzględnieniu punktów zwrotnych:';
+$_['text_stock']                              = 'Dostępność:';
+$_['text_instock']                            = 'Dostępny';
+$_['text_tax']                                = 'Bez podatku:';
+$_['text_discount']                           = ' lub więcej ';
+$_['text_option']                             = 'Dostępne opcje';
+$_['text_minimum']                            = 'Minimalna ilość zamówienia tego produktu to %s';
+$_['text_reviews']                            = '%s Opinii';
+$_['text_write']                              = 'Napisz opinię';
+$_['text_login']                              = 'Proszę się <a href="%s">zalogować</a> lub <a href="%s"> zarejestrować</a> aby obejrzeć';
+$_['text_no_reviews']                         = 'Brak opinii dla tego produktu.';
+$_['text_note']                               = '<span class="text-danger"> Uwaga:</span> HTML nie jest dopuszczony!';
+$_['text_success']                            = 'Dziękujemy za Twoja opinię. Została złożona do webmastera do zatwierdzenia.';
+$_['text_related']                            = 'Produkty powiązane';
+$_['text_tags']                               = 'Tagi:';
+$_['text_error']                              = 'Produkt nie został znaleziony!';
+$_['text_payment_recurring']                    = 'Profile płatności';
+$_['text_trial_description']                  = '%s co %d %s(s) dla %d odstąpieniu następnie';
+$_['text_payment_description']                = '%s co %d %s(s) dla %d wpłaty';
+$_['text_payment_cancel'] = '%s co %d %s(s) do anulowania';
+$_['text_payment_until_canceled_description'] = '%s co %d %s(s) do anulowania';
+$_['text_day']                                = 'dzień';
+$_['text_week']                               = 'tydzień';
+$_['text_semi_month']                         = 'pół miesiąca';
+$_['text_month']                              = 'miesiąc';
+$_['text_year']                               = 'rok';
 
 // Entry
-$_['entry_qty']                = 'Qty';
-$_['entry_name']               = 'Your Name';
-$_['entry_review']             = 'Your Review';
-$_['entry_rating']             = 'Rating';
-$_['entry_good']               = 'Good';
-$_['entry_bad']                = 'Bad';
+$_['entry_qty']                               = 'Ilość';
+$_['entry_name']                              = 'Twoje imię i nazwisko';
+$_['entry_review']                            = 'Twoja ocena';
+$_['entry_rating']                            = 'Ranking ocen';
+$_['entry_good']                              = 'Dobra';
+$_['entry_bad']                               = 'Zła';
+$_['entry_captcha']                           = 'Wprowadź kod w polu poniżej';
 
 // Tabs
-$_['tab_description']          = 'Description';
-$_['tab_attribute']            = 'Specification';
-$_['tab_review']               = 'Reviews (%s)';
+$_['tab_description']                         = 'Opis';
+$_['tab_attribute']                           = 'Specyfikacja';
+$_['tab_review']                              = 'Opinie (%s)';
 
 // Error
-$_['error_name']               = 'Warning: Review Name must be between 3 and 25 characters!';
-$_['error_text']               = 'Warning: Review Text must be between 25 and 1000 characters!';
-$_['error_rating']             = 'Warning: Please select a review rating!';
+$_['error_name']                              = 'Uwaga: Imię musi zawierać od 3 do 25 znaków!';
+$_['error_text']                              = 'Uwaga: Opinia musi zawierać od 25 do 1000 znaków!';
+$_['error_rating']                            = 'Uwaga: Wybierz poziom oceny!';
+$_['error_captcha']                           = 'Uwaga: Kod weryfikacyjny nie pasuje do kodu z obrazka!';
