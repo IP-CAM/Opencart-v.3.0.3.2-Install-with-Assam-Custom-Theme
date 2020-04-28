@@ -1,16 +1,16 @@
 <?php
 // Heading
-$_['heading_title']  = 'Change Password';
+$_['heading_title']  = 'Zmiana hasła';
 
 // Text
-$_['text_account']   = 'Account';
-$_['text_password']  = 'Your Password';
-$_['text_success']   = 'Success: Your password has been successfully updated.';
+$_['text_account']   = 'Konto';
+$_['text_password']  = 'Hasło';
+$_['text_success']   = 'Sukces: Hasło zostało pomyślnie zaktualizowane.';
 
 // Entry
-$_['entry_password'] = 'Password';
-$_['entry_confirm']  = 'Password Confirm';
+$_['entry_password'] = 'Hasło';
+$_['entry_confirm']  = 'Powtórz hasło';
 
 // Error
-$_['error_password'] = 'Password must be between 4 and 20 characters!';
-$_['error_confirm']  = 'Password confirmation does not match password!';
+$_['error_password'] = 'Hasło musi zawierać od 4 do 20 znaków!';
+$_['error_confirm']  = 'Hasło różni się od powtórzonego hasła!';

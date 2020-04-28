@@ -1,26 +1,24 @@
 <?php
 // Heading
-$_['heading_title']       = 'My Account';
+$_['heading_title']      = 'Moje konto';
 
 // Text
-$_['text_account']        = 'Account';
-$_['text_my_account']     = 'My Account';
-$_['text_my_orders']      = 'My Orders';
-$_['text_my_affiliate']   = 'My Affiliate Account';
-$_['text_my_newsletter']  = 'Newsletter';
-$_['text_edit']           = 'Edit your account information';
-$_['text_password']       = 'Change your password';
-$_['text_address']        = 'Modify your address book entries';
-$_['text_credit_card']    = 'Manage Stored Credit Cards';
-$_['text_wishlist']       = 'Modify your wish list';
-$_['text_order']          = 'View your order history';
-$_['text_download']       = 'Downloads';
-$_['text_reward']         = 'Your Reward Points';
-$_['text_return']         = 'View your return requests';
-$_['text_transaction']    = 'Your Transactions';
-$_['text_newsletter']     = 'Subscribe / unsubscribe to newsletter';
-$_['text_recurring']      = 'Recurring payments';
-$_['text_transactions']   = 'Transactions';
+$_['text_account']       = 'Konto';
+$_['text_my_account']    = 'Moje konto';
+$_['text_my_orders']     = 'Moje zamówienia';
+$_['text_my_newsletter'] = 'Biuletyn';
+$_['text_edit']          = 'Edytuj informacje o swoim koncie';
+$_['text_password']      = 'Zmień Hasło';
+$_['text_address']       = 'Modyfikuj książkę adresową';
+$_['text_wishlist']      = 'Modyfikuj swoją listę życzeń';
+$_['text_order']         = 'Zobacz historię swoich zamówień';
+$_['text_download']      = 'Pliki do pobrania';
+$_['text_reward']        = 'Punkty lojalnościowe';
+$_['text_return']        = 'Zobacz polecenia zwrotów';
+$_['text_transaction']   = 'Transakcje';
+$_['text_newsletter']    = 'Subskrypcja/rezygnacja z newsletter';
+$_['text_recurring']     = 'Powtarzające się płatności';
+$_['text_transactions']  = 'Transakcje';
 $_['text_affiliate_add']  = 'Register for an affiliate account';
 $_['text_affiliate_edit'] = 'Edit your affiliate information';
 $_['text_tracking']       = 'Custom Affiliate Tracking Code';

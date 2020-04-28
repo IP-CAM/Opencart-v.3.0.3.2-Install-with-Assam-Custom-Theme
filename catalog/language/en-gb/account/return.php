@@ -1,63 +1,64 @@
 <?php
 // Heading
-$_['heading_title']      = 'Product Returns';
+$_['heading_title']      = 'Zwrot produktów';
 
 // Text
-$_['text_account']       = 'Account';
-$_['text_return']        = 'Return Information';
-$_['text_return_detail'] = 'Return Details';
-$_['text_description']   = 'Please complete the form below to request an RMA number.';
-$_['text_order']         = 'Order Information';
-$_['text_product']       = 'Product Information';
-$_['text_reason']        = 'Reason for Return';
-$_['text_message']       = '<p>Thank you for submitting your return request. Your request has been sent to the relevant department for processing.</p><p> You will be notified via e-mail as to the status of your request.</p>';
-$_['text_return_id']     = 'Return ID:';
-$_['text_order_id']      = 'Order ID:';
-$_['text_date_ordered']  = 'Order Date:';
+$_['text_account']       = 'Konto';
+$_['text_return']        = 'Informacje o zwrotach';
+$_['text_return_detail'] = 'Szczegóły zwrotu';
+$_['text_description']   = 'Proszę wypełnić poniższy formularz, aby wnioskować o numer Autoryzacji Zwrotu Produktu.';
+$_['text_order']         = 'Informacje dotyczące zamówienia';
+$_['text_product']       = 'Informacje o produkcie &amp; przyczyna zwrotu';
+$_['text_message']       = '<p>Dziękujemy za zgłoszenie prośby o zwrot. Twoje zapytanie zostało przekazane do wyjaśnienia.</p><p> Zostaniesz powiadomiony e-mailem o statusie zgłoszenia.</p>';
+$_['text_return_id']     = 'Nr zwrotu:';
+$_['text_order_id']      = 'Nr zamówienia:';
+$_['text_date_ordered']  = 'Data zamówienia:';
 $_['text_status']        = 'Status:';
-$_['text_date_added']    = 'Date Added:';
-$_['text_comment']       = 'Return Comments';
-$_['text_history']       = 'Return History';
-$_['text_empty']         = 'You have not made any previous returns!';
-$_['text_agree']         = 'I have read and agree to the <a href="%s" class="agree"><b>%s</b></a>';
+$_['text_date_added']    = 'Data Dodania:';
+$_['text_comment']       = 'Uwagi dotyczące zwrotu';
+$_['text_history']       = 'Historia zwrotów';
+$_['text_empty']         = 'Nie masz żadnych wcześniejszych zwrotów!';
+$_['text_agree']         = 'Przeczytałem i zgadzam się z <a href="%s" class="agree"> <b>%s</b></a>';
 
 // Column
-$_['column_return_id']   = 'Return ID';
-$_['column_order_id']    = 'Order ID';
+$_['column_return_id']   = 'Nr zwrotu';
+$_['column_order_id']    = 'Nr zamówienia';
 $_['column_status']      = 'Status';
-$_['column_date_added']  = 'Date Added';
-$_['column_customer']    = 'Customer';
-$_['column_product']     = 'Product Name';
+$_['column_date_added']  = 'Data Dodania';
+$_['column_customer']    = 'Klient';
+$_['column_product']     = 'Nazwa produktu';
 $_['column_model']       = 'Model';
-$_['column_quantity']    = 'Quantity';
-$_['column_price']       = 'Price';
-$_['column_opened']      = 'Opened';
-$_['column_comment']     = 'Comment';
-$_['column_reason']      = 'Reason';
-$_['column_action']      = 'Action';
+$_['column_quantity']    = 'Ilość';
+$_['column_price']       = 'Cena';
+$_['column_opened']      = 'Produkt otwarty';
+$_['column_comment']     = 'Uwagi';
+$_['column_reason']      = 'Powód';
+$_['column_action']      = 'Działanie';
 
 // Entry
-$_['entry_order_id']     = 'Order ID';
-$_['entry_date_ordered'] = 'Order Date';
-$_['entry_firstname']    = 'First Name';
-$_['entry_lastname']     = 'Last Name';
-$_['entry_email']        = 'E-Mail';
-$_['entry_telephone']    = 'Telephone';
-$_['entry_product']      = 'Product Name';
-$_['entry_model']        = 'Product Code';
-$_['entry_quantity']     = 'Quantity';
-$_['entry_reason']       = 'Reason for Return';
-$_['entry_opened']       = 'Product is opened';
-$_['entry_fault_detail'] = 'Faulty or other details';
+$_['entry_order_id']     = 'Nr zamówienia';
+$_['entry_date_ordered'] = 'Data zamówienia';
+$_['entry_firstname']    = 'Imię';
+$_['entry_lastname']     = 'Nazwisko';
+$_['entry_email']        = 'E-mail';
+$_['entry_telephone']    = 'Telefon';
+$_['entry_product']      = 'Nazwa produktu';
+$_['entry_model']        = 'Kod produktu';
+$_['entry_quantity']     = 'Ilość';
+$_['entry_reason']       = 'Powód zwrotu';
+$_['entry_opened']       = 'Produkt jest otwarty';
+$_['entry_fault_detail'] = 'Uszkodzony lub inne powody';
+$_['entry_captcha']      = 'Wprowadź kod w polu poniżej';
 
 // Error
-$_['text_error']         = 'The returns you requested could not be found!';
-$_['error_order_id']     = 'Order ID required!';
-$_['error_firstname']    = 'First Name must be between 1 and 32 characters!';
-$_['error_lastname']     = 'Last Name must be between 1 and 32 characters!';
-$_['error_email']        = 'E-Mail Address does not appear to be valid!';
-$_['error_telephone']    = 'Telephone must be between 3 and 32 characters!';
-$_['error_product']      = 'Product Name must be greater than 3 and less than 255 characters!';
-$_['error_model']        = 'Product Model must be greater than 3 and less than 64 characters!';
-$_['error_reason']       = 'You must select a return product reason!';
-$_['error_agree']        = 'Warning: You must agree to the %s!';
+$_['text_error']         = 'Zwrot którego szukasz nie został odnaleziony!';
+$_['error_order_id']     = 'Wymagane ID zamówienia!';
+$_['error_firstname']    = 'Imię musi zawierać od 1 do 32 znaków!';
+$_['error_lastname']     = 'Nazwisko musi zawierać od 1 do 32 znaków!';
+$_['error_email']        = 'Adres e-mail wygląda na nieprawidłowy!';
+$_['error_telephone']    = 'Telefon musi zawierać od 3 do 32 znaków!';
+$_['error_product']      = 'Nazwa produktu musi zawierać od 3 do 255 znaków!';
+$_['error_model']        = 'Model produktu musi zawierać od 3 do 64 znaków!';
+$_['error_reason']       = 'Musisz wybrać powód zwrotu produktu!';
+$_['error_captcha']      = 'Kod weryfikacyjny nie pasuje do kodu z obrazka!';
+$_['error_agree']        = 'Uwaga: Musisz wyrazić zgodę na %s!';

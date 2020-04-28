@@ -1,33 +1,47 @@
 <?php
 // Heading
-$_['heading_title']        = 'Register Account';
+$_['heading_title']        = 'Załóż konto';
 
 // Text
-$_['text_account']         = 'Account';
-$_['text_register']        = 'Register';
-$_['text_account_already'] = 'If you already have an account with us, please login at the <a href="%s">login page</a>.';
-$_['text_your_details']    = 'Your Personal Details';
-$_['text_newsletter']      = 'Newsletter';
-$_['text_your_password']   = 'Your Password';
-$_['text_agree']           = 'I have read and agree to the <a href="%s" class="agree"><b>%s</b></a>';
+$_['text_account']         = 'Konto';
+$_['text_register']        = 'Załóż';
+$_['text_account_already'] = 'Jeśli masz już u nas konto, zaloguj się na <a href="%s">stronie logowania</a>.';
+$_['text_your_details']    = 'Twoje dane';
+$_['text_your_address']    = 'Twój adres';
+$_['text_newsletter']      = 'Biuletyn';
+$_['text_your_password']   = 'Hasło';
+$_['text_agree']           = 'Przeczytałem i zgadzam się z <a href="%s" class="agree"> <b>%s</b></a>';
 
 // Entry
-$_['entry_customer_group'] = 'Customer Group';
-$_['entry_firstname']      = 'First Name';
-$_['entry_lastname']       = 'Last Name';
-$_['entry_email']          = 'E-Mail';
-$_['entry_telephone']      = 'Telephone';
-$_['entry_newsletter']     = 'Subscribe';
-$_['entry_password']       = 'Password';
-$_['entry_confirm']        = 'Password Confirm';
+$_['entry_customer_group'] = 'Grupa klientów';
+$_['entry_firstname']      = 'Imię';
+$_['entry_lastname']       = 'Nazwisko';
+$_['entry_email']          = 'E-mail';
+$_['entry_telephone']      = 'Telefon';
+$_['entry_fax']            = 'Faks';
+$_['entry_company']        = 'Nazwa firmy';
+$_['entry_address_1']      = 'Adres 1';
+$_['entry_address_2']      = 'Adres 2';
+$_['entry_postcode']       = 'Kod pocztowy';
+$_['entry_city']           = 'Miejscowość';
+$_['entry_country']        = 'Kraj';
+$_['entry_zone']           = 'Województwo';
+$_['entry_newsletter']     = 'Zapisz się';
+$_['entry_password']       = 'Hasło';
+$_['entry_confirm']        = 'Powtórz hasło';
 
 // Error
-$_['error_exists']         = 'Warning: E-Mail Address is already registered!';
-$_['error_firstname']      = 'First Name must be between 1 and 32 characters!';
-$_['error_lastname']       = 'Last Name must be between 1 and 32 characters!';
-$_['error_email']          = 'E-Mail Address does not appear to be valid!';
-$_['error_telephone']      = 'Telephone must be between 3 and 32 characters!';
-$_['error_custom_field']   = '%s required!';
-$_['error_password']       = 'Password must be between 4 and 20 characters!';
-$_['error_confirm']        = 'Password confirmation does not match password!';
-$_['error_agree']          = 'Warning: You must agree to the %s!';
+$_['error_exists']         = 'Uwaga: Adres e-mail jest już zarejestrowany!';
+$_['error_firstname']      = 'Imię musi zawierać od 1 do 32 znaków!';
+$_['error_lastname']       = 'Nazwisko musi zawierać od 1 do 32 znaków!';
+$_['error_email']          = 'Adres e-mail wygląda na nieprawidłowy!';
+$_['error_telephone']      = 'Telefon musi zawierać od 3 do 32 znaków!';
+$_['error_address_1']      = 'Adres musi zawierać od 3 do 128 znaków!';
+$_['error_city']           = 'Nazwa miejscowości musi zawierać od 2 do 128 znaków!';
+$_['error_postcode']       = 'Kod pocztowy musi zawierać od 2 do 10 znaków!';
+$_['error_country']        = 'Wybierz kraj!';
+$_['error_zone']           = 'Proszę wybrać województwo!';
+$_['error_custom_field']   = '%s jest wymagane!';
+$_['error_password']       = 'Hasło musi zawierać od 4 do 20 znaków!';
+$_['error_confirm']        = 'Hasło różni się od powtórzonego hasła!';
+$_['error_agree']          = 'Musisz wyrazić zgodę na %s!';

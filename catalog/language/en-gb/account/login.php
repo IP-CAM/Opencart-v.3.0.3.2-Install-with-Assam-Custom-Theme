@@ -1,22 +1,22 @@
 <?php
 // Heading
-$_['heading_title']                = 'Account Login';
+$_['heading_title']                = 'Logowanie do konta';
 
 // Text
-$_['text_account']                 = 'Account';
-$_['text_login']                   = 'Login';
-$_['text_new_customer']            = 'New Customer';
-$_['text_register']                = 'Register Account';
-$_['text_register_account']        = 'By creating an account you will be able to shop faster, be up to date on an order\'s status, and keep track of the orders you have previously made.';
-$_['text_returning_customer']      = 'Returning Customer';
-$_['text_i_am_returning_customer'] = 'I am a returning customer';
-$_['text_forgotten']               = 'Forgotten Password';
+$_['text_account']                 = 'Konto';
+$_['text_login']                   = 'Logowanie';
+$_['text_new_customer']            = 'Nowy Klient';
+$_['text_register']                = 'Załóż konto';
+$_['text_register_account']        = 'Zakładając konto będziesz mógł kupować szybciej, być na bieżąco ze statusem zamówień oraz śledzić wcześniej złożone zamówienia.';
+$_['text_returning_customer']      = 'Zarejestrowany klient';
+$_['text_i_am_returning_customer'] = 'Jestem klientem zarejestrowanym';
+$_['text_forgotten']               = 'Zapomniałem hasła';
 
 // Entry
-$_['entry_email']                  = 'E-Mail Address';
-$_['entry_password']               = 'Password';
+$_['entry_email']                  = 'Adres e-mail';
+$_['entry_password']               = 'Hasło';
 
 // Error
-$_['error_login']                  = 'Warning: No match for E-Mail Address and/or Password.';
-$_['error_attempts']               = 'Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.';
-$_['error_approved']               = 'Warning: Your account requires approval before you can login.';
+$_['error_login']                  = 'Uwaga: adres e-mail i/lub hasło są nieprawidłowe.';
+$_['error_attempts']               = 'Uwaga: Przekroczono określoną liczbę prób logowania na konto. Proszę spróbować ponownie za godzinę. ';
+$_['error_approved']               = 'Uwaga: Twoje konto wymaga zatwierdzenia zanim będziesz mógł się zalogować.';

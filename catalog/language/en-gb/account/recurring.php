@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']                        = 'Recurring Payments';
+$_['heading_title']                        = 'Płatności cykliczne';
 
 // Text
 $_['text_account']                         = 'Account';
