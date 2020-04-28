@@ -1,15 +1,15 @@
 <?php
 // Text
-$_['text_subject']        = '%s - Thank you for registering';
-$_['text_welcome']        = 'Welcome and thank you for registering at %s!';
-$_['text_login']          = 'Your account has now been created and you can log in by using your email address and password by visiting our website or at the following URL:';
-$_['text_approval']       = 'Your account must be approved before you can login. Once approved you can log in by using your email address and password by visiting our website or at the following URL:';
-$_['text_service']        = 'Upon logging in, you will be able to access other services including reviewing past orders, printing invoices and editing your account information.';
-$_['text_thanks']         = 'Thanks,';
-$_['text_new_customer']   = 'New customer';
-$_['text_signup']         = 'A new customer has signed up:';
-$_['text_customer_group'] = 'Customer Group:';
-$_['text_firstname']      = 'First Name:';
-$_['text_lastname']       = 'Last Name:';
+$_['text_subject']        = '%s - Dziękujemy za rejestrację';
+$_['text_welcome']        = 'Witamy i dziękujemy za rejestrację w %s!';
+$_['text_login']          = 'Twoje konto zostało utworzone i możesz się zalogować używając swojego adresu e-mail i hasła podanego podczas rejestracji:';
+$_['text_approval']       = 'Twoje konto musi zostać zaakceptowane zanim możliwe będzie zalogowanie. Po akceptacji zaloguj się używając swojego adresu e-mail i hasła podanego podczas rejestracj:';
+$_['text_service']        = 'Po zalogowaniu będzie możliwe przeglądanie historii transakcji, pobieranie potwierdzeń zakupu i edycja swoich danych.';
+$_['text_thanks']         = 'Dziękuję,';
+$_['text_new_customer']   = 'Nowy użytkownik';
+$_['text_signup']         = 'Nowy użytkownik zarejestrował się:';
+$_['text_customer_group'] = 'Grupa:';
+$_['text_firstname']      = 'Imię:';
+$_['text_lastname']       = 'Nazwisko:';
 $_['text_email']          = 'E-Mail:';
-$_['text_telephone']      = 'Telephone:';
+$_['text_telephone']      = 'Telefon:';
