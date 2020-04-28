@@ -43,5 +43,5 @@ $_['error_country']        = 'Wybierz kraj!';
 $_['error_zone']           = 'Proszę wybrać województwo!';
 $_['error_custom_field']   = '%s jest wymagane!';
 $_['error_password']       = 'Hasło musi zawierać od 4 do 20 znaków!';
-$_['error_confirm']        = 'Hasło różni się od powtórzonego hasła!';
+$_['error_confirm']        = 'Hasła różnią się!';
 $_['error_agree']          = 'Musisz wyrazić zgodę na %s!';

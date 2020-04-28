@@ -5,6 +5,7 @@ $_['heading_title']        = 'Książka adresowa';
 // Text
 $_['text_account']         = 'Konto';
 $_['text_address_book']    = 'Wpisy do książki adresowej';
+$_['text_address_add']    = 'Dodaj adres';
 $_['text_edit_address']    = 'Edytuj adres';
 $_['text_add']             = 'Adres został pomyślnie wprowadzony';
 $_['text_edit']            = 'Twój adres został pomyślnie zaktualizowany';

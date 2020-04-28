@@ -13,4 +13,4 @@ $_['entry_confirm']  = 'Powtórz hasło';
 
 // Error
 $_['error_password'] = 'Hasło musi zawierać od 4 do 20 znaków!';
-$_['error_confirm']  = 'Hasło różni się od powtórzonego hasła!';
+$_['error_confirm']  = 'Hasła róźnią się!';
