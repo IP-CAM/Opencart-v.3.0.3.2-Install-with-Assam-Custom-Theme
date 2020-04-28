@@ -608,7 +608,7 @@ h2.price {
 .product-thumb .price-tax {
 	color: #999;
 	font-size: 12px;
-	display: block;
+	display: none;
 }
 .product-thumb .button-group {
 	border-top: 1px solid #ddd;
