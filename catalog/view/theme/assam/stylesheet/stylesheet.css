@@ -744,3 +744,49 @@ h2.price {
     background-image: none;
     background-color: #df5c39;
 }
+
+.swiper-slide-title-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide-title {
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	font-size: 33px;
+}
+.swiper-slide-text {
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+	font-size: 19px;
+}
+
+.swiper-slide-background {
+	background: rgba(0,0,0,.2);
+	width: 80%;
+	padding: 3%;
+	margin: 10% auto;
+}
+
+#logo img {
+	max-width: 200px;
+}
+
+input[type="radio"]:checked+img{
+	border: 2px solid #ca2a3b;
+}
+
+.option-waga .radio input, .option-kolor .radio input {
+	visibility: hidden;
+}
+
+.option-kolor .option-name, .option-kolor .option-price {
+	display: none;
+}
+
+.option-kolor .radio {
+	display: inline-block;
+}
