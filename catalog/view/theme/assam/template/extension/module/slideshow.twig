@@ -8,13 +8,16 @@
           {% else %}
             <img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />
           {% endif %}
-        <div class="swiper-slide-title-container">
-            <div class="swiper-slide-background">
-                <span class="swiper-slide-title">{{ banner.title }}</span>
-                <br/>
-                <span class="swiper-slide-text">{{ banner.link }}</span>
+
+          {% if banner.title|length > 5 %}
+            <div class="swiper-slide-title-container">
+                <div class="swiper-slide-background">
+                    <span class="swiper-slide-title">{{ banner.title }}</span>
+                    <br/>
+                    <span class="swiper-slide-text">{{ banner.link }}</span>
+                </div>
             </div>
-        </div>
+          {% endif %}
 
       </div>
       {% endfor %} </div>

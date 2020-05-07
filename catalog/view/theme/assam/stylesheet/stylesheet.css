@@ -769,6 +769,7 @@ h2.price {
 	width: 80%;
 	padding: 3%;
 	margin: 10% auto;
+    text-align: left;
 }
 
 #logo img {
