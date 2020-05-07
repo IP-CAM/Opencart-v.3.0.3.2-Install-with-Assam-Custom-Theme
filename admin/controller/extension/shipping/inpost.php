@@ -58,6 +58,18 @@ class ControllerExtensionShippingInpost extends Controller
             $data['shipping_inpost_api_endpoint'] = $this->config->get('shipping_inpost_api_endpoint');
         }
 
+        if (isset($this->request->post['shipping_inpost_status'])) {
+            $data['shipping_inpost_status'] = $this->request->post['shipping_inpost_status'];
+        } else {
+            $data['shipping_inpost_status'] = $this->config->get('shipping_inpost_status');
+        }
+
+        if (isset($this->request->post['shipping_inpost_sort_order'])) {
+            $data['shipping_inpost_sort_order'] = $this->request->post['shipping_inpost_sort_order'];
+        } else {
+            $data['shipping_inpost_sort_order'] = $this->config->get('shipping_inpost_sort_order');
+        }
+
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
