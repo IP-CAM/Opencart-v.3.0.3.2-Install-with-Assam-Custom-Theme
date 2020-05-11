@@ -4,26 +4,33 @@
 {% if shipping_methods %}
 <p>{{ text_shipping_method }}</p>
 {% for shipping_method in shipping_methods %}
-<p><strong>{{ shipping_method.title }}</strong></p>
-{% if not shipping_method.error %}
-{% for quote in shipping_method.quote %}
-<div class="radio">
-  <label> {% if quote.code == code or not code %}
-    {% set code = quote.code %}
-    <input type="radio" name="shipping_method" value="{{ quote.code }}" checked="checked" />
-    {% else %}
-    <input type="radio" name="shipping_method" value="{{ quote.code }}" />
-    {% endif %}
-    {{ quote.title }} - {{ quote.text }}</label>
+    <div class="{{ shipping_method.title }}">
+      <p><strong>{{ shipping_method.title }}</strong></p>
+      {% if not shipping_method.error %}
+        {% for quote in shipping_method.quote %}
+            {% if quote.code == 'inpost.inpost' %}
+              <div id="selected-paczkomat" class="alert alert-success alert-dismissible" style="display: none">
 
-  {% if shipping_method.title == 'Inpost' %}
-      {{ inpost_shipping }}
-  {% endif %}
-</div>
-{% endfor %}
-{% else %}
-<div class="alert alert-danger alert-dismissible">{{ shipping_method.error }}</div>
-{% endif %}
+              </div>
+            {% endif %}
+        <div class="radio">
+          <label> {% if quote.code == code or not code %}
+            {% set code = quote.code %}
+            <input type="radio" name="shipping_method" value="{{ quote.code }}" checked="checked" />
+            {% else %}
+            <input type="radio" name="shipping_method" value="{{ quote.code }}" />
+            {% endif %}
+            {{ quote.title }} - {{ quote.text }}</label>
+
+          {% if quote.code == 'inpost.inpost' %}
+              {{ inpost_shipping }}
+          {% endif %}
+        </div>
+        {% endfor %}
+      {% else %}
+        <div class="alert alert-danger alert-dismissible">{{ shipping_method.error }}</div>
+      {% endif %}
+    </div>
 {% endfor %}
 {% endif %}
 <p><strong>{{ text_comments }}</strong></p>

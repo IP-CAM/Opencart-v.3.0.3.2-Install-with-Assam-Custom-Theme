@@ -20,9 +20,19 @@
       address += ' ' + point.address_details.city;
 
       document.getElementById('shipping-comment').value =
-        'Wybrany paczkomat: ' + point.name + ', ' + address
+        'Wybrany paczkomat: ' + point.name + ', ' + address;
+
+      document.getElementById('selected-paczkomat').style.display = 'block';
+      document.getElementById('selected-paczkomat').innerHTML =
+        'Wybrany paczkomat: ' + point.name + ', ' + address;
     });
   };
+
+  $('#collapse-shipping-method input[type="radio"]').on('click', function() {
+    document.getElementById('selected-paczkomat').style.display = 'none';
+    document.getElementById('shipping-comment').value = '';
+  });
+
 </script>
 
 
