@@ -10,6 +10,16 @@ class ControllerCheckoutCheckout extends Controller {
 		$products = $this->cart->getProducts();
 
 		foreach ($products as $product) {
+            foreach ($product['option'] as $option) {
+                //for weight - if product quantity * weight is lower than option quantity(in grams) then product is out of stock
+                if ($option['name'] == 'Waga') {
+                    $waga = str_replace('g', '', $option['value']);
+                    if ($option['quantity'] > 0 && $option['quantity'] < $waga * $product['quantity']) {
+                        $this->response->redirect($this->url->link('checkout/cart'));
+                    }
+                }
+            }
+
 			$product_total = 0;
 
 			foreach ($products as $product_2) {

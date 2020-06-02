@@ -91,6 +91,14 @@ class ControllerCheckoutCart extends Controller {
 						}
 					}
 
+					//for weight - if product quantity * weight is lower than option quantity(in grams) then product is out of stock
+					if($option['name'] == 'Waga') {
+					    $waga = str_replace('g', '', $option['value']);
+                        if ($option['quantity'] > 0 && $option['quantity'] < $waga * $product['quantity']) {
+                            $data['error_warning'] = $this->language->get('error_stock');
+                        }
+                    }
+
 					$option_data[] = array(
 						'name'  => $option['name'],
 						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)

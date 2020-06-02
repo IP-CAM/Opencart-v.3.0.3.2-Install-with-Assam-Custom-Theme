@@ -263,7 +263,7 @@ class ModelCheckoutOrder extends Model {
 			
 	public function addOrderHistory($order_id, $order_status_id, $comment = '', $notify = false, $override = false) {
 		$order_info = $this->getOrder($order_id);
-		
+
 		if ($order_info) {
 			// Fraud Detection
 			$this->load->model('account/customer');
@@ -320,16 +320,28 @@ class ModelCheckoutOrder extends Model {
 				// Stock subtraction
 				$order_products = $this->getOrderProducts($order_id);
 
-				foreach ($order_products as $order_product) {
-					$this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity - " . (int)$order_product['quantity'] . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+                foreach ($order_products as $order_product) {
+                    $order_options = $this->getOrderOptions($order_id, $order_product['order_product_id']);
 
-					$order_options = $this->getOrderOptions($order_id, $order_product['order_product_id']);
+                    $weight_factor = 0;
+                    foreach ($order_options as $order_option) {
+                        if($order_option['name'] == 'Waga') {
+                            $weight_factor = (int)str_replace('g', '', $order_option['value']);
+                            file_put_contents('weight.log', 'start option name: '. $weight_factor . PHP_EOL, FILE_APPEND);
+                            //subtract stock for all weight options
+                            $this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity - " . (int)$order_product['quantity'] * $weight_factor . ") WHERE product_option_id = '" . (int)$order_option['product_option_id'] . "' AND subtract = '1'");
+                        } else {
+                            $this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity - " . (int)$order_product['quantity'] . ") WHERE product_option_value_id = '" . (int)$order_option['product_option_value_id'] . "' AND subtract = '1'");
+                        }
+                    }
 
-					foreach ($order_options as $order_option) {
-						$this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity - " . (int)$order_product['quantity'] . ") WHERE product_option_value_id = '" . (int)$order_option['product_option_value_id'] . "' AND subtract = '1'");
-					}
-				}
-				
+                    if($weight_factor) {
+                        $this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity - " . (int)$order_product['quantity'] * $weight_factor . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+                    } else {
+                        $this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity - " . (int)$order_product['quantity'] . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+                    }
+                }
+
 				// Add commission if sale is linked to affiliate referral.
 				if ($order_info['affiliate_id'] && $this->config->get('config_affiliate_auto')) {
 					$this->load->model('account/customer');
