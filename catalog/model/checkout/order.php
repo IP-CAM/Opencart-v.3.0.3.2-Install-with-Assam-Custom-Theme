@@ -327,7 +327,6 @@ class ModelCheckoutOrder extends Model {
                     foreach ($order_options as $order_option) {
                         if($order_option['name'] == 'Waga') {
                             $weight_factor = (int)str_replace('g', '', $order_option['value']);
-                            file_put_contents('weight.log', 'start option name: '. $weight_factor . PHP_EOL, FILE_APPEND);
                             //subtract stock for all weight options
                             $this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity - " . (int)$order_product['quantity'] * $weight_factor . ") WHERE product_option_id = '" . (int)$order_option['product_option_id'] . "' AND subtract = '1'");
                         } else {
@@ -363,13 +362,26 @@ class ModelCheckoutOrder extends Model {
 				$order_products = $this->getOrderProducts($order_id);
 
 				foreach($order_products as $order_product) {
-					$this->db->query("UPDATE `" . DB_PREFIX . "product` SET quantity = (quantity + " . (int)$order_product['quantity'] . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+					//$this->db->query("UPDATE `" . DB_PREFIX . "product` SET quantity = (quantity + " . (int)$order_product['quantity'] . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
 
 					$order_options = $this->getOrderOptions($order_id, $order_product['order_product_id']);
 
+                    $weight_factor = 0;
 					foreach ($order_options as $order_option) {
-						$this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity + " . (int)$order_product['quantity'] . ") WHERE product_option_value_id = '" . (int)$order_option['product_option_value_id'] . "' AND subtract = '1'");
+                        if($order_option['name'] == 'Waga') {
+                            $weight_factor = (int)str_replace('g', '', $order_option['value']);
+                            //subtract stock for all weight options
+                            $this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity + " . (int)$order_product['quantity'] * $weight_factor . ") WHERE product_option_id = '" . (int)$order_option['product_option_id'] . "' AND subtract = '1'");
+                        } else {
+                            $this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity + " . (int)$order_product['quantity'] . ") WHERE product_option_value_id = '" . (int)$order_option['product_option_value_id'] . "' AND subtract = '1'");
+                        }
 					}
+
+                    if($weight_factor) {
+                        $this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity + " . (int)$order_product['quantity'] * $weight_factor . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+                    } else {
+                        $this->db->query("UPDATE " . DB_PREFIX . "product SET quantity = (quantity + " . (int)$order_product['quantity'] . ") WHERE product_id = '" . (int)$order_product['product_id'] . "' AND subtract = '1'");
+                    }
 				}
 
 				// Remove coupon, vouchers and reward points history
